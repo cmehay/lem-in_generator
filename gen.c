@@ -6,7 +6,7 @@
 /*   By: cmehay <cmehay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/02/13 23:45:19 by cmehay            #+#    #+#             */
-/*   Updated: 2014/02/14 01:28:39 by cmehay           ###   ########.fr       */
+/*   Updated: 2014/02/14 01:58:22 by cmehay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ int			main(int argc, char **argv)
 	int	ran;
 
 	srand(time(NULL));
-	if (argc != 3 || !ft_atoi(argv[1]) || !ft_atoi(argv[2]))
+	if (argc != 3 || !ft_atoi(argv[1]) || ft_atoi(argv[2]) < 2)
 	{
 		printf("Usage: gen [many of ants] [many of nodes]\n");
 		return (1);
@@ -78,12 +78,18 @@ int			main(int argc, char **argv)
 	i = 0;
 	printf("start-");
 	printf("%d\n", rand() % node);
-	printf("start-");
-	printf("%d\n", rand() % node);
+	while (rand() % 2)
+	{
+		printf("start-");
+		printf("%d\n", rand() % node);
+	}
 	printf("end-");
 	printf("%d\n", rand() % node);
-	printf("end-");
-	printf("%d\n", rand() % node);
+	while (rand() % 2)
+	{
+		printf("end-");
+		printf("%d\n", rand() % node);
+	}
 	i = 0;
 	while (i < node)
 	{
