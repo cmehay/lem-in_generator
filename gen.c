@@ -6,7 +6,7 @@
 /*   By: cmehay <cmehay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/02/13 23:45:19 by cmehay            #+#    #+#             */
-/*   Updated: 2014/02/14 01:58:22 by cmehay           ###   ########.fr       */
+/*   Updated: 2014/02/14 15:42:54 by cmehay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,21 +76,6 @@ int			main(int argc, char **argv)
 	while (i < node)
 		printf("%1$d %1$d %1$d\n", i++);
 	i = 0;
-	printf("start-");
-	printf("%d\n", rand() % node);
-	while (rand() % 2)
-	{
-		printf("start-");
-		printf("%d\n", rand() % node);
-	}
-	printf("end-");
-	printf("%d\n", rand() % node);
-	while (rand() % 2)
-	{
-		printf("end-");
-		printf("%d\n", rand() % node);
-	}
-	i = 0;
 	while (i < node)
 	{
 		while (rand() % 2)
@@ -104,6 +89,21 @@ int			main(int argc, char **argv)
 		while (ran == i)
 			ran = rand() % node;
 		printf("%d-%d\n", i++, ran);
+	}
+	i = 0;
+	printf("start-");
+	printf("%d\n", rand() % node);
+	while (rand() % 2)
+	{
+		printf("start-");
+		printf("%d\n", rand() % node);
+	}
+	printf("end-");
+	printf("%d\n", rand() % node);
+	while (rand() % 2)
+	{
+		printf("end-");
+		printf("%d\n", rand() % node);
 	}
 	return (0);
 }
