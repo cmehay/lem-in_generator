@@ -6,7 +6,7 @@
 /*   By: cmehay <cmehay@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/02/13 23:45:19 by cmehay            #+#    #+#             */
-/*   Updated: 2014/02/14 00:36:21 by cmehay           ###   ########.fr       */
+/*   Updated: 2014/02/14 01:28:39 by cmehay           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -87,6 +87,13 @@ int			main(int argc, char **argv)
 	i = 0;
 	while (i < node)
 	{
+		while (rand() % 2)
+		{
+			ran = rand() % node;
+			while (ran == i)
+				ran = rand() % node;
+			printf("%d-%d\n", i, ran);
+		}
 		ran = rand() % node;
 		while (ran == i)
 			ran = rand() % node;
